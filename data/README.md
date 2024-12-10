@@ -15,6 +15,7 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 | F (Fair)       | The data is within 8% of the actual flow |
 | P (Poor)       | The data are >8% of the actual flow      |
 
+------
 
 ## Provo River Dataset (`provo.csv`)
 | Variable   | Description                                               | Format/Units                      |
@@ -32,6 +33,8 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 | `Q`          | Discharge                                                     | Cubic meters per second (m³/s)                   |
 | `Q_quality`  | USGS measurement quality code                                 | Code (`Excellent`, `Good`, `Fair`, `Poor`)       |
 
+------
+
 # Data Citation
 
 If you use this data in your research, please cite the appropriate source for each dataset.
@@ -45,6 +48,7 @@ Kaweah River data:
 U.S. Geological Survey (2024). KAWEAH R BL TERMINUS DAM CA. U.S. Geological Survey National Water Information System database. Retrieved from https://waterdata.usgs.gov/ca/nwis/measurements/?site_no=11210950
 [Note: Data query parameters - Site number: 11210950; Date range: 1969-02-03 to 1977-12-04; Only rated measurements were used; Excluded measurement with party_nm = "Har/Har"]
 
+------
 
 # References
 
