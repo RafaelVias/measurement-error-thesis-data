@@ -1,20 +1,10 @@
-# Discharge-Stage Measurements with Uncertainty Estimates 
-This repository houses the datasets analyzed in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025). Along with discharge and stage measurements from two USGS gauging stations and their associated uncertainty estimates, the repository includes R scripts demonstrating data visualization and implementation of the thesis' measurement error methodology through a developmental version of the bdrc package.
+# Discharge-stage measurements with uncertainty estimates 
+This repository houses the datasets analyzed in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025), along with R scripts demonstrating data visualization and implementation of the thesis' measurement error methodology through a developmental version of the bdrc package.
 
----
-
-# Dataset Overview
-The repository includes data from two distinct gauging stations that exemplify different approaches to reporting measurement uncertainty in discharge observations.
-
-The Provo River dataset (Utah, USGS 10154200) contains 22 measurements from 1986 to 2021, with discharge measurement uncertainty reported quantitatively as standard errors. 
-
-The Kaweah River dataset (California, USGS 11210950) includes 107 measurements from 1969 to 1977, with measurement quality documented through the USGS qualitative rating system. This system categorizes measurements as Excellent (±2%), Good (±5%), Fair (±8%), or Poor (>8%) based on measurement conditions and equipment used.
-
----
-
-# Data Structure and Variable Descriptions
+# Datasets and Data Structure
 
 ## Provo River Dataset (`provo.csv`)
+Contains 22 measurements from USGS station 10154200 (Utah, 1986-2021) with quantitative uncertainty reporting.
 
 | Variable   | Description                                               | Format/Units                      |
 |------------|-----------------------------------------------------------|-----------------------------------|
@@ -23,18 +13,17 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 | `Q`        | Discharge                                                 | Cubic meters per second (m³/s)    |
 | `Q_sigma`  | Standard error of discharge measurements                  | Cubic meters per second (m³/s)    |
 
----
-
 ## Kaweah River Dataset (`kaweah.csv`)
+Contains 107 measurements from USGS station 11210950 (California, 1969-1977) with qualitative uncertainty ratings based on the USGS system (Turnipseed et al., 2010): Excellent (±2%), Good (±5%), Fair (±8%), or Poor (>8%).
 
 | Variable     | Description                                                   | Format/Units                                     |
 |--------------|---------------------------------------------------------------|--------------------------------------------------|
 | `datetime`   | Timestamp of the measurement                                  | `YYYY-MM-DDTHH:MM:SSZ`                           |
 | `W`          | Water elevation (stage)                                       | Meters (m)                                       |
 | `Q`          | Discharge                                                     | Cubic meters per second (m³/s)                   |
-| `Q_quality`  | Qualitative assessment of the discharge measurement accuracy  | Categories (`Excellent`, `Good`, `Fair`, `Poor`) |
+| `Q_quality`  | Qualitative assessment of measurement accuracy                | Categories (`Excellent`, `Good`, `Fair`, `Poor`) |
 
----
+
 
 # Repository Structure
 
@@ -102,4 +91,9 @@ For the Kaweah River data:
 
 U.S. Geological Survey (2024). KAWEAH R BL TERMINUS DAM CA. U.S. Geological Survey National Water Information System database. Retrieved from https://waterdata.usgs.gov/ca/nwis/measurements/?site_no=11210950
 [Note: Data query parameters - Site number: 11210950; Date range: 1969-02-03 to 1977-12-04; Only rated measurements were used; Excluded measurement with party_nm = "Har/Har"]
+
+# References
+
+Turnipseed, D.P., and Sauer, V.B., 2010, Discharge measurements at gaging stations: U.S. Geological Survey Techniques and Methods book 3, chap. A8, 87 p.
+
 
