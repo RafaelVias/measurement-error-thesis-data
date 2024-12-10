@@ -31,7 +31,7 @@ measurement-error-thesis-data/
 │   ├── citations.md             # Complete citation information
 |
 ├── Figures/                     # Figures directory
-│   ├── data/                    # Figures created within plot_data.R 
+    ├── data/                    # Figures created within plot_data.R 
     └── model_fit/               # Figures created within fit_models.R
 ```
 
