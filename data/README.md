@@ -25,11 +25,12 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 | `Q_quality`  | USGS measurement quality code                                 | Code (`Excellent`, `Good`, `Fair`, `Poor`)       |
 
 ### USGS Discharge Measurement Quality Codes
-Code  Description
-E     Excellent    The data is within 2% of the actual flow
-G     Good         The data is within 5% of the actual flow
-F     Fair         The data is within 8% of the actual flow
-P     Poor         The data are >8% of the actual flow
+| Code           | Description                              |
+|----------------|------------------------------------------|
+| E (Excellent)  | The data is within 2% of the actual flow |
+| G (Good)       | The data is within 5% of the actual flow |
+| F (Fair)       | The data is within 8% of the actual flow |
+| P (Poor)       | The data are >8% of the actual flow      |
 
 # Data Citation
 
