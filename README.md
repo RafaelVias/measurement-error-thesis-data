@@ -28,8 +28,8 @@ For detailed variable descriptions, refer to the data/README.md.
 
 # Requirements
 - R
-- devtools package
-- tidyverse package
+- `devtools` package
+- `tidyverse` package
 
 ---
 
@@ -38,9 +38,12 @@ For detailed variable descriptions, refer to the data/README.md.
 ```
 measurement-error-thesis-data/
 │
+├── REAMDE.md                        # Main repository overview
+|
 ├── data/                            # Raw data directory
 │   ├── provo.csv                    # Discharge measurements with standard errors
 │   ├── kaweah.csv                   # Discharge measurements with quality ratings
+|   ├── README.md                    # Detailed dataset descriptions
 │    
 ├── R/                               # R scripts directory
 │   ├── load_data.R                  # Script for loading the data
