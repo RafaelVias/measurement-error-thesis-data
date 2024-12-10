@@ -1,4 +1,4 @@
-# Discharge-Stage Measurement Data with Measurment-Uncertainty Estimates
+# Discharge-Stage Measurement Data 
 
 ## Dataset Overview
 The repository includes data from two gauging stations that exemplify different approaches to reporting measurement uncertainty in discharge observations.
