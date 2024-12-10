@@ -1,5 +1,5 @@
 # Discharge-Stage Measurements with Uncertainty Estimates 
-This repository contains the datasets analyzed in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025). The data consists of paired discharge-stage measurements from two United States Geological Survey (USGS) gauging stations, along with their associated discharge measurement uncertainties.
+This repository houses the datasets analyzed in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025). Along with discharge and stage measurements from two USGS gauging stations and their associated uncertainty estimates, the repository includes R scripts demonstrating data visualization and implementation of the thesis' measurement error methodology through a developmental version of the bdrc package.
 
 ---
 
@@ -45,10 +45,15 @@ measurement-error-thesis-data/
 ---
 
 # Usage
-The data can be accessed and analyzed using standard R functions. Example scripts are provided in the `R/` directory that demonstrate:
-1. Data loading and basic manipulation
-2. Data visualization
-3. Rating curve model fitting using the developmental version of the bdrc package, which includes measurement error modeling capabilities
+This repository serves three main purposes:
+1. It provides access to discharge measurement datasets with different types of uncertainty reporting (quantitative and qualitative)
+2. It demonstrates how to visualize these datasets through example R scripts
+3. It shows how to implement the measurement error methodology developed in the thesis using the developmental version of the bdrc package
+
+The `R/` directory contains scripts for each of these purposes:
+- `load_data.R`: Data loading and basic manipulation
+- `plot_data.R`: Creation of various data visualizations (outputs saved to `Figures/data/`)
+- `fit_models.R`: Implementation of the thesis' measurement error model using the bdrc package (outputs saved to `Figures/model_fit/`)
 
 Basic example of how to use the bdrc package:
 ```R
