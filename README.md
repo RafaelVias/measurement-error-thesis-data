@@ -1,6 +1,6 @@
 # Discharge-stage measurements with uncertainty estimates 
 
-This repository contains datasets and scripts used in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025). It provides discharge-stage measurements with associated discharge uncertainty estimates and R scripts for visualization and implementation of novel rating curve methodologies using the bdrc package.
+This repository contains datasets and scripts used in the Master's thesis *Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models* (2025). It provides discharge-stage measurements with associated discharge uncertainty estimates and R scripts for visualization and implementation of novel rating curve methodologies using the bdrc package.
 
 ---
 
@@ -21,8 +21,8 @@ For detailed variable descriptions, refer to the data/README.md.
 
 ### Figures
 
-- *Figures/data/*: Visualizations from `plot_data.R`
-- *Figures/rating_curves/*: Outputs from `rating_curves.R`
+- **Figures/data/**: Visualizations from `plot_data.R`
+- **Figures/rating_curves/**: Outputs from `rating_curves.R`
 
 ---
 
