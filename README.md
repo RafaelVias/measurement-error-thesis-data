@@ -63,9 +63,6 @@ devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
 # Load Provo and Kaweah datasets (creates two objects: provo and kaweah)
 source("R/load_data.R")
 
-# Create visualizations (saves to Figures/ directory)
-source("R/create_figures.R")
-
 # Fit extended generalized power-law rating curve (i.e., measurement-error model)
 gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
 
