@@ -1,4 +1,9 @@
 
+# Script for fitting bdrc rating curves
 
-# Look at Provo data
-head(provo)
+# Download developmental version of bdrc package
+devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
+
+# Load Provo and Kaweah datasets (creates two objects: provo and kaweah)
+source("R/load_data.R")
+
