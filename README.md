@@ -13,22 +13,30 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 measurement-error-thesis-data/
 │
 ├── data/                        # Raw data directory
-│   ├── provo_natural.csv        # Discharge measurements with standard errors
+│   ├── provo.csv                # Discharge measurements with standard errors
 │   ├── kaweah.csv               # Discharge measurements with quality ratings
 │
+├── R/
+│   ├── load_data.R              # Script for loading the data
+│   ├── create_plots.R           # Visualization examples
+│   ├── fit_models.R             # Use bdrc pakckage to fit rating curves
+|
 ├── docs/                        # Documentation directory
 │   ├── data_format.md           # Data structure and variable descriptions
 │   ├── measurement_quality.md   # USGS quality rating documentation
-│   └── citations.md             # Complete citation information
-│
-└── examples/                    # Example code directory
-    ├── load_data.R              # Data loading demonstration
-    └── plot_data.R              # Visualization examples
+│   ├── citations.md             # Complete citation information
+|
+├── Figures/
+│   ├── data/
+    └── rating_curves/
 ```
 
 # Usage
 
-The data can be accessed and analyzed using standard R function. Example scripts are provided in the examples/ directory to demonstrate proper data loading and ways to visualize the data.
+The data can be accessed and analyzed using standard R function. Example scripts are provided in the R/ directory to demonstrate proper data loading and ways to visualize the data. A brief example:
+```
+
+```
 
 # Citation
 
