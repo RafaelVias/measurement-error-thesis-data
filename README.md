@@ -26,14 +26,14 @@ For detailed variable descriptions, refer to the data/README.md.
 
 ---
 
-# Requirements
+## Requirements
 - R
 - `devtools` package
 - `tidyverse` package
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 measurement-error-thesis-data/
@@ -55,6 +55,8 @@ measurement-error-thesis-data/
     └── rating_curves/               # Figures created within rating_curves.R
 ```
 
+---
+
 ## Usage
 
 A basic example of how to use the developmental version of the `bdrc` package with the Provo or Kaweah data:
@@ -72,4 +74,4 @@ gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
 
 See the `rating_curves.R` script for more details on rating curve fitting with bdrc.
 
-
+---
