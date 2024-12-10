@@ -12,27 +12,47 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 
 ---
 
+# Data Structure and Variable Descriptions
+
+## Provo River Dataset (`provo.csv`)
+
+| Variable   | Description                                               | Format/Units                      |
+|------------|-----------------------------------------------------------|-----------------------------------|
+| `datetime` | Timestamp of the measurement                              | `YYYY-MM-DD HH:MM:SS [UTC-07:00]` |
+| `W`        | Water elevation (stage)                                   | Meters (m)                        |
+| `Q`        | Discharge                                                 | Cubic meters per second (m³/s)    |
+| `Q_sigma`  | Standard error of discharge measurements                  | Cubic meters per second (m³/s)    |
+
+---
+
+## Kaweah River Dataset (`kaweah.csv`)
+
+| Variable     | Description                                                   | Format/Units                                     |
+|--------------|---------------------------------------------------------------|--------------------------------------------------|
+| `datetime`   | Timestamp of the measurement                                  | `YYYY-MM-DDTHH:MM:SSZ`                           |
+| `W`          | Water elevation (stage)                                       | Meters (m)                                       |
+| `Q`          | Discharge                                                     | Cubic meters per second (m³/s)                   |
+| `Q_quality`  | Qualitative assessment of the discharge measurement accuracy  | Categories (`Excellent`, `Good`, `Fair`, `Poor`) |
+
+---
+
 # Repository Structure
+
 ```
 measurement-error-thesis-data/
 │
-├── data/                        # Raw data directory
-│   ├── provo.csv                # Discharge measurements with standard errors
-│   ├── kaweah.csv               # Discharge measurements with quality ratings
-│
-├── R/                           # R script directory
-│   ├── load_data.R              # Script for loading the data
-│   ├── plot_data.R              # Visualization of data
-│   ├── fit_models.R             # Use bdrc pakckage to fit rating curves
+├── data/                            # Raw data directory
+│   ├── provo.csv                    # Discharge measurements with standard errors
+│   ├── kaweah.csv                   # Discharge measurements with quality ratings
+│    
+├── R/                               # R scripts directory
+│   ├── load_data.R                  # Script for loading the data
+│   ├── plot_data.R                  # Visualization of data
+│   ├── rating_curves.R              # Use bdrc pakckage to fit rating curves
 |
-├── docs/                        # Documentation directory
-│   ├── data_format.md           # Data structure and variable descriptions
-│   ├── measurement_quality.md   # USGS quality rating documentation
-│   ├── citations.md             # Complete citation information
-|
-├── Figures/                     # Figures directory
-    ├── data/                    # Figures created within plot_data.R 
-    └── model_fit/               # Figures created within fit_models.R
+├── Figures/                         # Figures directory
+    ├── data/                        # Figures created within plot_data.R 
+    └── rating_curves/               # Figures created within rating_curves.R
 ```
 
 ---
@@ -53,7 +73,7 @@ This repository serves three main purposes:
 The `R/` directory contains scripts for each of these purposes:
 - `load_data.R`: Data loading and basic manipulation
 - `plot_data.R`: Creation of various data visualizations (outputs saved to `Figures/data/`)
-- `fit_models.R`: Implementation of the thesis' measurement error model using a developmental version of the bdrc package (outputs saved to `Figures/model_fit/`)
+- `rating_curves.R`: Implementation of the thesis' novel rating curve model using a developmental version of the bdrc package (outputs saved to `Figures/rating_curves/`)
 
 A basic example of how to use the bdrc package:
 
@@ -66,10 +86,9 @@ source("R/load_data.R")
 
 # Fit extended generalized power-law rating curve (i.e., measurement-error model)
 gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
-
-# Read details about gplm function
-?bdrc::gplm()
 ```
+
+See the `rating_curves.R` script for more details on rating curve fitting with bdrc.
 
 # Data Citation
 

@@ -1,6 +1,8 @@
 
-# Load required libraries
-library(ggplot2)
+# Script for visualizing the Provo River and Kaweah River datasets
+
+# Install/load required packages
+if (!require("ggplot2")) install.packages("ggplot2")
 
 # Load the datasets
 source("R/load_data.R")
