@@ -2,7 +2,6 @@
 
 ## Provo River Dataset (`provo_natural.csv`)
 
-### Variables
 | Variable   | Description                                               | Format/Units                      |
 |------------|-----------------------------------------------------------|-----------------------------------|
 | `datetime` | The timestamp of the measurement                          | `YYYY-MM-DD HH:MM:SS [UTC-07:00]` |
@@ -14,7 +13,6 @@
 
 ## Kaweah River Dataset (`kaweah.csv`)
 
-### Variables
 | Variable     | Description                                                   | Format/Units                                     |
 |--------------|---------------------------------------------------------------|--------------------------------------------------|
 | `datetime`   | The timestamp of the measurement                              | `YYYY-MM-DDTHH:MM:SSZ`                           |
