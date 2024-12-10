@@ -1,29 +1,37 @@
 # Discharge-stage measurements with uncertainty estimates 
-This repository houses the datasets analyzed in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025), along with R scripts demonstrating data visualization and implementation of the thesis' measurement error methodology through a developmental version of the bdrc package.
 
-# Datasets and Data Structure
+This repository contains datasets and scripts used in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025). It provides discharge-stage measurements with associated discharge uncertainty estimates and R scripts for visualization and implementation of novel rating curve methodologies using the bdrc package.
 
-## Provo River Dataset (`provo.csv`)
-Contains 22 measurements from USGS station 10154200 (Utah, 1986-2021) with quantitative uncertainty reporting.
+---
 
-| Variable   | Description                                               | Format/Units                      |
-|------------|-----------------------------------------------------------|-----------------------------------|
-| `datetime` | Timestamp of the measurement                              | `YYYY-MM-DD HH:MM:SS [UTC-07:00]` |
-| `W`        | Water elevation (stage)                                   | Meters (m)                        |
-| `Q`        | Discharge                                                 | Cubic meters per second (m³/s)    |
-| `Q_sigma`  | Standard error of discharge measurements                  | Cubic meters per second (m³/s)    |
+## Repository Contents
 
-## Kaweah River Dataset (`kaweah.csv`)
-Contains 107 measurements from USGS station 11210950 (California, 1969-1977) with qualitative uncertainty ratings based on the USGS system (Turnipseed et al., 2010): Excellent (±2%), Good (±5%), Fair (±8%), or Poor (>8%).
+### Datasets
 
-| Variable     | Description                                                   | Format/Units                                     |
-|--------------|---------------------------------------------------------------|--------------------------------------------------|
-| `datetime`   | Timestamp of the measurement                                  | `YYYY-MM-DDTHH:MM:SSZ`                           |
-| `W`          | Water elevation (stage)                                       | Meters (m)                                       |
-| `Q`          | Discharge                                                     | Cubic meters per second (m³/s)                   |
-| `Q_quality`  | Qualitative assessment of measurement accuracy                | Categories (`Excellent`, `Good`, `Fair`, `Poor`) |
+- Provo River Dataset: Quantitative uncertainty estimates with 22 discharge measurements from USGS station 10154200 (Utah, 1986–2021).
+- Kaweah River Dataset: Qualitative uncertainty ratings with 107 discharge measurements from USGS station 11210950 (California, 1969–1977).
 
+For detailed variable descriptions, refer to the data/README.md.
 
+### R Scripts
+
+- `load_data.R`: Script for loading and preparing datasets.
+- `plot_data.R`: Examples of data visualization.
+- `rating_curves.R`: Demonstrates fitting rating curves using the `bdrc` package.
+
+### Figures
+
+- *Figures/data/*: Visualizations from `plot_data.R`
+- *Figures/rating_curves/*: Outputs from `rating_curves.R`
+
+---
+
+# Requirements
+- R
+- devtools package
+- tidyverse package
+
+---
 
 # Repository Structure
 
@@ -44,27 +52,9 @@ measurement-error-thesis-data/
     └── rating_curves/               # Figures created within rating_curves.R
 ```
 
----
+## Usage
 
-# Requirements
-- R
-- devtools package
-- tidyverse package
-
----
-
-# Usage
-This repository serves three main purposes:
-1. It provides access to discharge measurement datasets with different types of uncertainty reporting (quantitative and qualitative)
-2. It demonstrates how to visualize these datasets through example R scripts
-3. It shows how to implement the measurement error methodology developed in the thesis using the developmental version of the bdrc package
-
-The `R/` directory contains scripts for each of these purposes:
-- `load_data.R`: Data loading and basic manipulation
-- `plot_data.R`: Creation of various data visualizations (outputs saved to `Figures/data/`)
-- `rating_curves.R`: Implementation of the thesis' novel rating curve model using a developmental version of the bdrc package (outputs saved to `Figures/rating_curves/`)
-
-A basic example of how to use the bdrc package:
+A basic example of how to use the developmental version of the `bdrc` package with the Provo or Kaweah data:
 
 ```R
 # Download developmental version of bdrc package
@@ -78,18 +68,5 @@ gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
 ```
 
 See the `rating_curves.R` script for more details on rating curve fitting with bdrc.
-
-# Data Citation
-
-If you use this data in your research, please cite the appropriate source for each dataset.
-
-For the Provo River data:
-
-Hodson, T. O., Doore, K. J., Kenney, T. A., Over, T. M., & Yeheyis, M. B. (2024). Ratingcurve: A Python Package for Fitting Streamflow Rating Curves. Hydrology, 11(2), 14. https://doi.org/10.3390/hydrology11020014
-
-For the Kaweah River data:
-
-U.S. Geological Survey (2024). KAWEAH R BL TERMINUS DAM CA. U.S. Geological Survey National Water Information System database. Retrieved from https://waterdata.usgs.gov/ca/nwis/measurements/?site_no=11210950
-[Note: Data query parameters - Site number: 11210950; Date range: 1969-02-03 to 1977-12-04; Only rated measurements were used; Excluded measurement with party_nm = "Har/Har"]
 
 
