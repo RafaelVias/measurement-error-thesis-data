@@ -1,7 +1,6 @@
 
 # Load required libraries
 library(ggplot2)
-library(dplyr)
 
 # Load the datasets
 source("R/load_data.R")

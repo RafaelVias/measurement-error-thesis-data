@@ -1,13 +1,16 @@
+
 # Script for loading discharge-stage measurement data
 
-# Load required libraries
-require(lubridate)
+# Install these required packages if needed
+# install.packages("lubridate")
+# install.packages("dplyr")
+
 
 # Load Provo data
 provo <- read.csv("data/provo.csv") |>
-    mutate(datetime = ymd_hms(datetime))
+    dplyr::mutate(datetime = lubridate::ymd_hms(datetime))
 
 # Load Kaweah data
 kaweah <- read.csv("data/kaweah.csv") |>
-    mutate(datetime = ymd_hms(datetime))
+    dplyr::mutate(datetime = lubridate::ymd_hms(datetime))
 

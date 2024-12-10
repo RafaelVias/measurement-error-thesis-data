@@ -35,12 +35,22 @@ measurement-error-thesis-data/
 
 The data can be accessed and analyzed using standard R function. Example scripts are provided in the R/ directory to demonstrate proper data loading and ways to visualize the data. A brief example:
 ```
+# Download developmental version of bdrc package
+devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
 
+# Load Provo and Kaweah datasets (creates two objects: provo and kaweah)
+source("R/load_data.R")
+
+# Fit extended generalized power-law rating curve (i.e., measurment-error model)
+gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
+
+# For details on how to use the function
+?bdrc::gplm()
 ```
 
 # Citation
 
-If you use this data in your research, please cite the appropriate source for each dataset:
+If you use this data in your research, please cite the appropriate source for each dataset.
 
 For the Provo River data:
 
