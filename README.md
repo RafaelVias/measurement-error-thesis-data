@@ -20,9 +20,9 @@ measurement-error-thesis-data/
 │   ├── provo.csv                # Discharge measurements with standard errors
 │   ├── kaweah.csv               # Discharge measurements with quality ratings
 │
-├── R/
+├── R/                           # R script directory
 │   ├── load_data.R              # Script for loading the data
-│   ├── create_figures.R         # Visualization examples
+│   ├── plot_data.R              # Visualization of data
 │   ├── fit_models.R             # Use bdrc pakckage to fit rating curves
 |
 ├── docs/                        # Documentation directory
@@ -30,15 +30,15 @@ measurement-error-thesis-data/
 │   ├── measurement_quality.md   # USGS quality rating documentation
 │   ├── citations.md             # Complete citation information
 |
-├── Figures/
-│   ├── data/
-    └── rating_curves/
+├── Figures/                     # Figures directory
+│   ├── data/                    # Figures created within plot_data.R 
+    └── model_fit/               # Figures created within fit_models.R
 ```
 
 ---
 
 # Requirements
-- R (>= 4.0.0)
+- R
 - devtools package
 - tidyverse package
 
@@ -50,7 +50,7 @@ The data can be accessed and analyzed using standard R functions. Example script
 2. Data visualization
 3. Rating curve model fitting using the developmental version of the bdrc package, which includes measurement error modeling capabilities
 
-Basic example:
+Basic example of how to use the bdrc package:
 ```R
 # Download developmental version of bdrc package
 devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
@@ -68,7 +68,7 @@ gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
 ?bdrc::gplm()
 ```
 
-# Citation
+# Data Citation
 
 If you use this data in your research, please cite the appropriate source for each dataset.
 
