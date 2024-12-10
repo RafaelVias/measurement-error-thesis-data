@@ -1,4 +1,4 @@
-# Discharge Measurement Data with Uncertainty
+# Discharge-Stage Measurements with Estimated Discharge Uncertainty 
 
 This repository contains the datasets analyzed in the Master's thesis "Response-Measurement-Uncertainty Data in Bayesian Gaussian-Gaussian Models" (2025). The data consists of paired discharge-stage measurements from two United States Geological Survey (USGS) gauging stations, along with their associated discharge measurement uncertainties.
 
@@ -10,11 +10,20 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 
 # Repository Structure
 
-The repository is organized as follows:
-
-- data/: Contains the raw measurement data in CSV format for both rivers
-- docs/: Provides detailed documentation about data formats and measurement uncertainty
-- examples/: Includes R scripts demonstrating data loading and visualization
+measurement-error-thesis-data/
+│
+├── data/                        # Raw data directory
+│   ├── provo_natural.csv        # Discharge measurements with standard errors
+│   ├── kaweah.csv               # Discharge measurements with quality ratings
+│
+├── docs/                        # Documentation directory
+│   ├── data_format.md           # Data structure and variable descriptions
+│   ├── measurement_quality.md   # USGS quality rating documentation
+│   └── citations.md             # Complete citation information
+│
+└── examples/                    # Example code directory
+    ├── load_data.R              # Data loading demonstration
+    └── plot_data.R              # Visualization examples
 
 # Usage
 
