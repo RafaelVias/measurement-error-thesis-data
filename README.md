@@ -34,7 +34,7 @@ measurement-error-thesis-data/
 # Usage
 
 The data can be accessed and analyzed using standard R function. Example scripts are provided in the R/ directory to demonstrate proper data loading and ways to visualize the data. A brief example:
-```
+```{r, eval = F}
 # Download developmental version of bdrc package
 devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
 
