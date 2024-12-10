@@ -53,9 +53,9 @@ This repository serves three main purposes:
 The `R/` directory contains scripts for each of these purposes:
 - `load_data.R`: Data loading and basic manipulation
 - `plot_data.R`: Creation of various data visualizations (outputs saved to `Figures/data/`)
-- `fit_models.R`: Implementation of the thesis' measurement error model using the bdrc package (outputs saved to `Figures/model_fit/`)
+- `fit_models.R`: Implementation of the thesis' measurement error model using a developmental version of the bdrc package (outputs saved to `Figures/model_fit/`)
 
-Basic example of how to use the bdrc package:
+A basic example of how to use the bdrc package:
 ```R
 # Download developmental version of bdrc package
 devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
