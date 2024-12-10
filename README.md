@@ -56,6 +56,7 @@ The `R/` directory contains scripts for each of these purposes:
 - `fit_models.R`: Implementation of the thesis' measurement error model using a developmental version of the bdrc package (outputs saved to `Figures/model_fit/`)
 
 A basic example of how to use the bdrc package:
+
 ```R
 # Download developmental version of bdrc package
 devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
@@ -66,7 +67,7 @@ source("R/load_data.R")
 # Fit extended generalized power-law rating curve (i.e., measurement-error model)
 gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
 
-# For details on how to use the function
+# Read details about gplm function
 ?bdrc::gplm()
 ```
 
