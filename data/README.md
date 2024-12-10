@@ -7,6 +7,14 @@ The Provo River dataset (Utah, USGS 10154200) contains 22 measurements from 1986
 
 The Kaweah River dataset (California, USGS 11210950) includes 107 measurements from 1969 to 1977, with measurement quality documented through the USGS qualitative rating system (Turnipseed et al., 2010). This system categorizes measurements based on their quality using a letter code system, described below.
 
+#### USGS Discharge Measurement Quality Codes
+| Code           | Description                              |
+|----------------|------------------------------------------|
+| E (Excellent)  | The data is within 2% of the actual flow |
+| G (Good)       | The data is within 5% of the actual flow |
+| F (Fair)       | The data is within 8% of the actual flow |
+| P (Poor)       | The data are >8% of the actual flow      |
+
 
 ## Provo River Dataset (`provo.csv`)
 | Variable   | Description                                               | Format/Units                      |
@@ -23,14 +31,6 @@ The Kaweah River dataset (California, USGS 11210950) includes 107 measurements f
 | `W`          | Water elevation (stage)                                       | Meters (m)                                       |
 | `Q`          | Discharge                                                     | Cubic meters per second (m³/s)                   |
 | `Q_quality`  | USGS measurement quality code                                 | Code (`Excellent`, `Good`, `Fair`, `Poor`)       |
-
-### USGS Discharge Measurement Quality Codes
-| Code           | Description                              |
-|----------------|------------------------------------------|
-| E (Excellent)  | The data is within 2% of the actual flow |
-| G (Good)       | The data is within 5% of the actual flow |
-| F (Fair)       | The data is within 8% of the actual flow |
-| P (Poor)       | The data are >8% of the actual flow      |
 
 # Data Citation
 
