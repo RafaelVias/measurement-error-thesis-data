@@ -1,6 +1,6 @@
-# Discharge-Stage Measurements with Uncertainty Estimated 
+# Discharge-Stage Measurements with Uncertainty Estimates 
 
-This repository contains the datasets analyzed in the Master's thesis "Response-Measurement-Uncertainty Data & Bayesian Gaussian-Gaussian Models" (2025). The data consists of paired discharge-stage measurements from two United States Geological Survey (USGS) gauging stations, along with their associated discharge measurement uncertainties.
+This repository contains the datasets analyzed in the Master's thesis "Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models" (2025). The data consists of paired discharge-stage measurements from two United States Geological Survey (USGS) gauging stations, along with their associated discharge measurement uncertainties.
 
 # Dataset Overview
 
