@@ -59,7 +59,7 @@ measurement-error-thesis-data/
 
 ## Usage
 
-A basic example of how to use the developmental version of the `bdrc` package with the Provo or Kaweah data:
+A basic example of how to use the developmental version of the `bdrc` package with the Provo River or Kaweah River data:
 
 ```R
 # Download developmental version of bdrc package
