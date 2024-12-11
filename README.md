@@ -50,7 +50,7 @@ measurement-error-thesis-data/
 │   ├── plot_data.R                  # Visualization of data
 │   ├── rating_curves.R              # Use bdrc pakckage to fit rating curves
 |
-├── Figures/                         # Figures directory
+└── Figures/                         # Figures directory
     ├── data/                        # Figures created within plot_data.R 
     └── rating_curves/               # Figures created within rating_curves.R
 ```
