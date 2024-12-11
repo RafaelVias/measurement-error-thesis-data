@@ -1,6 +1,6 @@
 # Modeling Measurement Error with Data </br> & Bayesian Gaussian-Gaussian Models </br> - Datasets and Examples
 
-This repository contains datasets and scripts used in the Master's thesis *Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models* (2025). It provides discharge-stage measurements with associated discharge uncertainty estimates and R scripts for visualization and implementation of novel rating curve methodologies using the bdrc package.
+This repository contains datasets and scripts used in the Master's thesis *Modeling Measurement Error with Data & Bayesian Gaussian-Gaussian Models* (2025). It provides discharge-stage measurements with associated discharge uncertainty estimates and R scripts for visualization and implementation of novel rating curve methodologies using the `bdrc` package.
 
 ---
 
@@ -8,10 +8,10 @@ This repository contains datasets and scripts used in the Master's thesis *Model
 
 ### Datasets
 
-- Provo River Dataset: Quantitative uncertainty estimates with 22 discharge measurements from USGS station 10154200 (Utah, 1986–2021).
-- Kaweah River Dataset: Qualitative uncertainty ratings with 107 discharge measurements from USGS station 11210950 (California, 1969–1977).
+- **Provo River Dataset**: Quantitative uncertainty estimates with 22 discharge measurements from USGS station 10154200 (Utah, 1986–2021).
+- **Kaweah River Dataset**: Qualitative uncertainty ratings with 107 discharge measurements from USGS station 11210950 (California, 1969–1977).
 
-For detailed variable descriptions, refer to the data/README.md.
+For detailed variable descriptions, refer to the [data/README.md](data/README.md).
 
 ### R Scripts
 
@@ -72,6 +72,6 @@ source("R/load_data.R")
 gplm_me.fit <- bdrc::gplm(Q | Q_sigma ~ W, provo)
 ```
 
-See the `rating_curves.R` script for more details on rating curve fitting with bdrc.
+See the `rating_curves.R` script for more details on rating curve fitting with `bdrc`.
 
 ---
