@@ -63,6 +63,7 @@ A basic example of how to use the developmental version of the `bdrc` package wi
 
 ```R
 # Download developmental version of bdrc package
+if (!require("devtools")) install.packages("devtools")
 devtools::install_github("sor16/bdrc", ref = "measurement-uncertainty")
 
 # Load Provo and Kaweah datasets (creates two objects: provo and kaweah)
